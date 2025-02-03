@@ -70,3 +70,61 @@ body {
     width: 100vw;
     height: 100vh;
 }
+
+button {
+    cursor: pointer;
+    appearance: none;
+    border: none;
+    background-color: transparent;
+}
+
+.opened-window {
+    --bg-opened-window: rgb(248, 246, 233, .6);
+    --border-opened-window-color: #663C2D;
+    --box-shadow-opened-window: 5px 5px var(--border-opened-window-color);
+    --border-opened-window: 4px solid var(--border-opened-window-color); 
+    --border-radius-opened-window: .5rem; 
+
+    background-color: var(--bg-opened-window);
+    box-sizing: var(--box-shadow-opened-window);
+    border: var(--border-opened-window);
+    border-radius: var(--border-radius-opened-window);
+    width: max-content;
+
+    display: flex; 
+    flex-direction: column;
+    
+    .browser-buttons {
+        --browser-button-red: #f7623d; 
+        --browser-button-orange: #f9ae35; 
+        --browser-button-green: #5ed83d; 
+        --border: 4px solid #663C2D;
+
+        /* FLEX bovenaan centreren */
+        order: -1;
+
+        border-bottom: var(--border);
+        padding: .5rem 1rem;
+
+        display: flex; 
+        flex-direction: row;
+        justify-content: start;
+        gap: .4rem;
+
+        button {
+            width: .8rem;
+            height: .8rem;
+            border-radius: 50%; 
+            
+            &.red {
+                background-color: var(--browser-button-red);
+            }
+            &.orange {
+                background-color: var(--browser-button-orange);
+            }
+            &.green {
+                background-color: var(--browser-button-green);
+            }
+        }
+    }
+}
