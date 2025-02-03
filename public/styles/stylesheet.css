@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+    margin: 0; 
+    padding: 0; 
+    overflow-x: hidden;
+}
+
+body {
+    /* colors */
+    --browser-button-red: #EAA594; 
+    --browser-button-yellow: #FCD8A0; 
+    --browser-button-green: #D2E7CC; 
+    --button: #FFE3F3;
+    --button-shadow: #FF8282;
+    --button-hover: #00A9E3;
+    --button-hover-shadow: #B7E1F0;
+
+    /* collages */
+    --collage-color-1a: #457156;
+    --collage-color-1b: #2c4436;
+    --collage-color-2a: #6b5e74;
+    --collage-color-2b: #312a35;
+
+    /* box-shadows */
+    --button-box-shadow: 5px 5px var(--button-shadow);
+    --button-box-shadow-hover: 5px 5px var(--button-hover-shadow);
+
+    /* font */
+    --main-font-family: "VT323";
+    --main-font-weight: 400; 
+    --main-font-size: 16px; 
+
+    /* scales */
+    --scale-01: .1;
+    --scale-02: .2;
+    --scale-03: .3;
+    --scale-04: .4;
+    --scale-05: .5;
+    --scale-06: .6;
+    --scale-07: .7;
+    --scale-08: .8;
+    --scale-09: .9;
+    --scale-1: 1; 
+    
+    /* z-index */
+    --z-index-01: -1; 
+    --z-index-0: 0; 
+    --z-index-1: 1; 
+    --z-index-2: 2; 
+    --z-index-3: 3; 
+    --z-index-4: 4; 
+    --z-index-5: 5; 
+    --z-index-6: 6; 
+
+    /* background images */
+    --desktop-bg-image: url("../assets/wallpapers/wallpaper-brown.jpg");
+    --mobile-bg-image: url("../assets/wallpapers/wallpaper-green.jpg");
+
+    /* cursor images */
+    --cursor: url("../assets/cursor-image-2_1.png"), pointer;
+    --cursor-hover: url("../assets/cursor-image-hover-2.png"), pointer;
+
+    font-family: var(--main-font-family), monospace;
+    font-weight: var(--main-font-weight);
+    font-size: var(--main-font-size);
+
+    background-image: var(--desktop-bg-image);
+    background-size: cover;
+
+    width: 100vw;
+    height: 100vh;
+}
