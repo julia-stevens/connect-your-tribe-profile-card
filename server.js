@@ -39,8 +39,15 @@ app.set('views', './views')
 // Maak een GET route voor de index (meestal doe je dit in de root, als /)
 // In je visitekaartje was dit waarschijnlijk index.html
 app.get('/', async function (request, response) {
-   // Render index.liquid uit de Views map en geef de opgehaalde data mee, in een variabele genaamd person
-   response.render('index.liquid', {person: personResponseJSON.data})
+  // Render index.liquid uit de Views map en geef de opgehaalde data mee, in een variabele genaamd person
+  
+  // parse person.custom alleen als het een string is (anders wordt een object geparsed en krijg je errors)
+  if (typeof personResponseJSON.data.custom === "string") {
+    personResponseJSON.data.custom = JSON.parse(personResponseJSON.data.custom);
+  }
+
+  response.render('index.liquid', {person: personResponseJSON.data})
+
 })
 
 // Had je meer pagina's in je oude visitekaartje? Zoals een contact.html?
