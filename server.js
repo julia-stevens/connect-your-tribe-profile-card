@@ -15,12 +15,12 @@ const personResponse = await fetch('https://fdnd.directus.app/items/person/' + p
 // Lees van de response van die fetch het JSON object in, waar we iets mee kunnen doen
 const personResponseJSON = await personResponse.json()
 
-try {
+try { // deze code wordt eerst uitgevoerd
   // parse person.custom alleen als het een string is (anders wordt een object geparsed en krijg je errors)
   if (typeof personResponseJSON.data.custom === "string") {
     personResponseJSON.data.custom = JSON.parse(personResponseJSON.data.custom);
   }
-} catch (error) {
+} catch (error) { // bij een error wordt deze code uitgevoerd
   console.error(error);
   personResponseJSON.data.custom = {}; // person.custom leeg, zodat alleen deze velden leeg zijn bij een error (en niet de hele pagina failt)
 }
