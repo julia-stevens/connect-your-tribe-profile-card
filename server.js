@@ -15,6 +15,17 @@ const personResponse = await fetch('https://fdnd.directus.app/items/person/' + p
 // Lees van de response van die fetch het JSON object in, waar we iets mee kunnen doen
 const personResponseJSON = await personResponse.json()
 
+try {
+  // parse person.custom alleen als het een string is (anders wordt een object geparsed en krijg je errors)
+  if (typeof personResponseJSON.data.custom === "string") {
+    personResponseJSON.data.custom = JSON.parse(personResponseJSON.data.custom);
+  }
+} catch (error) {
+  console.error(error);
+  personResponseJSON.data.custom = {}; // person.custom leeg, zodat alleen deze velden leeg zijn bij een error (en niet de hele pagina failt)
+}
+
+
 // Controleer eventueel de data in je console
 // (Let op: dit is _niet_ de console van je browser, maar van NodeJS, in je terminal)
 // console.log(personResponseJSON)
@@ -40,14 +51,7 @@ app.set('views', './views')
 // In je visitekaartje was dit waarschijnlijk index.html
 app.get('/', async function (request, response) {
   // Render index.liquid uit de Views map en geef de opgehaalde data mee, in een variabele genaamd person
-  
-  // parse person.custom alleen als het een string is (anders wordt een object geparsed en krijg je errors)
-  if (typeof personResponseJSON.data.custom === "string") {
-    personResponseJSON.data.custom = JSON.parse(personResponseJSON.data.custom);
-  }
-
-  response.render('index.liquid', {person: personResponseJSON.data})
-
+    response.render('index.liquid', {person: personResponseJSON.data})
 })
 
 // Had je meer pagina's in je oude visitekaartje? Zoals een contact.html?
@@ -74,3 +78,4 @@ app.listen(app.get('port'), function () {
   // Toon een bericht in de console en geef het poortnummer door
   console.log(`Application started on http://localhost:${app.get('port')}`)
 })
+
