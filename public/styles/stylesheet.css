@@ -69,6 +69,9 @@ body {
 
     width: 100vw;
     height: 100vh;
+
+    margin: 1rem 0;
+
 }
 
 button {
@@ -93,6 +96,13 @@ button {
 
     display: flex; 
     flex-direction: column;
+
+    .content {
+        padding: .5rem 1rem;
+        display: grid; 
+        place-items: center;
+        gap: .5rem;
+    }
     
     .browser-buttons {
         --browser-button-red: #f7623d; 
