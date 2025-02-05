@@ -1,8 +1,11 @@
 {% render 'partials/head.liquid' %}
+{% comment %} <details><summary>Data</summary><pre>{{ person | json:4 }}</pre></details> {% endcomment %}
+
   <main>
     <section class="opened-window introduction">
       <div class="content">
         <h1>{{ person.name }}</h1>
+        <p>{{ person.bio }}</p>
         <img src="{{ person.avatar }}" class="avatar" alt="Snoopy met een brilletje op z'n neus" width="100">
       </div>
       <div class="browser-buttons">
@@ -16,9 +19,9 @@
       <div class="content">
         <h2>.about-me {</h2>
         <p>
-          <span>--github-handle: "{{ person.github_handle }}";</span>
-          <span>--favorite-color: "{{ person.custom.favoriteColor }}";</span>
-          <span>--location: "{{ person.custom.location }}";</span>
+          <span>--github-handle: "<em>{{ person.github_handle }}</em>";</span>
+          <span>--favorite-color: "<em class="cornflowerblue">{{ person.custom.favoriteColor }}</em>";</span>
+          <span>--location: "<em>{{ person.custom.location }}</em>";</span>
           <span class="h2-block">}</span>
         </p>
       </div>
@@ -54,10 +57,10 @@
 
   <section class="desktop-items">
     <div class="desktop-items-left">
-      <section class="desktop-item">
-        <h3>Mijn hond</h3>
+      <section class="desktop-item icon1">
         <button><img src="assets/desktop-icons/icon-browser.png" alt="Retro icoon browser"></button>
-        <article class="opened-window">
+        <h3>Mijn hond</h3>
+        <article class="opened-window item1">
           <div class="content">
             <h4>Mijn hond</h4>
             <img src="assets/desktop-hond.jpeg" alt="Afbeelding van een kleine schattige hond" width="100">
@@ -70,10 +73,10 @@
         </article>
       </section>
 
-      <section class="desktop-item">
-        <h3>Semester 1</h3>
+      <section class="desktop-item icon2">
         <button><img src="assets/desktop-icons/icon-folder.png" alt="Retro icoon map" width="100"></button>
-        <article class="opened-window">
+        <h3>Semester 1</h3>
+        <article class="opened-window item2">
           <div class="content">
             <h4>Semester 1</h4>
             <p>Bekijk <a href="{{ person.website }}">hier</a> mijn werk</p>
@@ -85,13 +88,14 @@
           </div>
         </article>
       </section>
+    
 
-      <section class="desktop-item">
-        <h3>Currently watching</h3>
+      <section class="desktop-item icon3">
         <button><img src="assets/desktop-icons/icon-doc.png" alt="Retro icoon tekst document" width="100"></button>
-        <article class="opened-window">
+        <h3>Currently watching</h3>
+        <article class="opened-window item3">
           <div class="content">
-            <h4>Yellowjackets</h4>
+            <h4>Currently watching</h4>
             <img src="assets/yellowjackets.jpg" alt="Thumbnail serie Yellowjackets" width="100">
           </div>
           <div class="browser-buttons">
@@ -102,14 +106,14 @@
         </article>
       </section>
     </div>
-    
-    <div class="desktop-items-right">
+
+    <div class="desktop-items-right icon4">
       <section class="desktop-item">
-        <h3>Currently working on</h3>
         <button><img src="assets/desktop-icons/icon-file.png" alt="Retro icoon document" width="100"></button>
-        <article class="opened-window">
+        <h3>Currently working on</h3>
+        <article class="opened-window item4">
           <div class="content">
-            <h4>Profile card</h4>
+            <h4>Currently working on</h4>
             <p>Bekijk <a href="https://github.com/julia-stevens/connect-your-tribe-profile-card">hier</a> de repository</p>
           </div>
           <div class="browser-buttons">
@@ -120,10 +124,10 @@
         </article>
       </section>
 
-      <section class="desktop-item">
-        <h3>More about me</h3>
+      <section class="desktop-item icon5">
         <button><img src="assets/desktop-icons/icon-images.png" alt="Retro icoon afbeeldingen" width="100"></button>
-        <article class="opened-window">
+        <h3>More about me</h3>
+        <article class="opened-window item5">
           <div class="content">
             <h4>More about me</h4>
             <p>Hoi! Ik ben een frontender in spé. Ik wil van alles leren over HTML, CSS en Javascript en nieuwe technieken blijven leren ontdekken. Bekijk mijn bureaublad om mij iets beter te leren kennen.</p>
@@ -136,10 +140,10 @@
         </article>
       </section>
 
-      <section class="desktop-item">
-        <h3><em>Digital Garden</em></h3>
+      <section class="desktop-item icon6">
         <button><img src="assets/desktop-icons/icon-notepad.png" alt="Retro icoon notitieblok" width="100"></button>
-        <article class="opened-window">
+        <h3><em>Digital Garden</em></h3>
+        <article class="opened-window item6">
           <div class="content">
             <h4>Digital garden <em>Tortured Poet</em></h4>
             <a href="https://julia-stevens.github.io/i-love-web/digital-garden/digital-garden-v2/index.html">
