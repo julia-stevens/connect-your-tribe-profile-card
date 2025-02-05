@@ -1,125 +1,48 @@
-// // DESKTOP ITEMS CONTENT WINDOWS appear when DESKTOP ITEM CLICKED
-// const figure1 = document.querySelector("#figure1");
-// const desktopItems = document.querySelector("#item1");
+const desktopIcon1 = document.querySelector(".icon1 button");
+const window1 = document.querySelector(".item1");
 
+const desktopIcon2 = document.querySelector(".icon2 button");
+const window2 = document.querySelector(".item2");
 
-// figure1.addEventListener("click", function () {
-//   desktopItems.classList.toggle("active")
-// });
+const desktopIcon3 = document.querySelector(".icon3 button");
+const window3 = document.querySelector(".item3");
 
-// const figure2 = document.querySelector("#figure2");
-// const desktopItems2 = document.querySelector("#item2");
+const desktopIcon4 = document.querySelector(".icon4 button");
+const window4 = document.querySelector(".item4");
 
-// figure2.addEventListener("click", function () {
-//   desktopItems2.classList.toggle("active")
-// });
+const desktopIcon5 = document.querySelector(".icon5 button");
+const window5 = document.querySelector(".item5");
 
-// const figure3 = document.querySelector("#figure3");
-// const desktopItems3 = document.querySelector("#item3");
+const desktopIcon6 = document.querySelector(".icon6 button");
+const window6 = document.querySelector(".item6");
 
-// figure3.addEventListener("click", function () {
-//   desktopItems3.classList.toggle("active")
-// });
+desktopIcon1.addEventListener("click", visibilityHandlerWindow1);
+desktopIcon2.addEventListener("click", visibilityHandlerWindow2);
+desktopIcon3.addEventListener("click", visibilityHandlerWindow3);
+desktopIcon4.addEventListener("click", visibilityHandlerWindow4);
+desktopIcon5.addEventListener("click", visibilityHandlerWindow5);
+desktopIcon6.addEventListener("click", visibilityHandlerWindow6);
 
-// const figure4 = document.querySelector("#figure4");
-// const desktopItems4 = document.querySelector("#item4");
+function visibilityHandlerWindow1() {
+    window1.classList.toggle("show");
+}
 
-// figure4.addEventListener("click", function () {
-//   desktopItems4.classList.toggle("active")
-// });
+function visibilityHandlerWindow2() {
+    window2.classList.toggle("show");
+}
 
-// const figure5 = document.querySelector("#figure5");
-// const desktopItems5 = document.querySelector("#item5");
+function visibilityHandlerWindow3() {
+    window3.classList.toggle("show");
+}
 
-// figure5.addEventListener("click", function () {
-//   desktopItems5.classList.toggle("active")
-// });
+function visibilityHandlerWindow4() {
+    window4.classList.toggle("show");
+}
 
-// const figure6 = document.querySelector("#figure6");
-// const desktopItems6 = document.querySelector("#item6");
+function visibilityHandlerWindow5() {
+    window5.classList.toggle("show");
+}
 
-// figure6.addEventListener("click", function () {
-//   desktopItems6.classList.toggle("active")
-// });
-
-// // DESKTOP ITEMS CONTENT ANIMATION TRIGGER when BUTTON MAIN WINDOW CLICKED
-// const buttonMainWindow = document.querySelector("#window-main-button");
-
-// buttonMainWindow.addEventListener("click", function () {
-//   figure1.classList.toggle("clicked")
-//   figure2.classList.toggle("clicked")
-//   figure3.classList.toggle("clicked")
-//   figure4.classList.toggle("clicked")
-//   figure5.classList.toggle("clicked")
-//   figure6.classList.toggle("clicked")
-// });
-
-// // ANIMATION TRIGGER HOVER DESKTOP ICONS
-// figure1.addEventListener("click", function () {
-//   figure1.classList.toggle("active")
-// });
-
-// figure2.addEventListener("click", function () {
-//   figure2.classList.toggle("active")
-// });
-
-// figure3.addEventListener("click", function () {
-//   figure3.classList.toggle("active")
-// });
-
-// figure4.addEventListener("click", function () {
-//   figure4.classList.toggle("active")
-// });
-
-// figure5.addEventListener("click", function () {
-//   figure5.classList.toggle("active")
-// });
-
-// figure6.addEventListener("click", function () {
-//   figure6.classList.toggle("active")
-// });
-
-// // ANIMATION TRIGGER DESKTOP ITEMS
-// item1.addEventListener("click", function () {
-//   item1.classList.toggle("clicked")
-// });
-
-// item2.addEventListener("click", function () {
-//   item2.classList.toggle("clicked")
-// });
-
-// item3.addEventListener("click", function () {
-//   item3.classList.toggle("clicked")
-// });
-
-// item4.addEventListener("click", function () {
-//   item4.classList.toggle("clicked")
-// });
-
-// item5.addEventListener("click", function () {
-//   item5.classList.toggle("clicked")
-// });
-
-// item6.addEventListener("click", function () {
-//   item6.classList.toggle("clicked")
-// });
-
-// // WINDOW CHANGES COLOR WHEN red, orange or green BUTTON CLICKED
-// const buttonRed = document.querySelector("#buttonRed");
-// const windowBackground = document.querySelector("#opened-window")
-
-// buttonRed.addEventListener("click", function () {
-//   windowBackground.classList.toggle("activeRed")
-// });
-
-// const buttonOrange = document.querySelector("#buttonOrange");
-
-// buttonOrange.addEventListener("click", function () {
-//   windowBackground.classList.toggle("activeOrange")
-// });
-
-// const buttonGreen = document.querySelector("#buttonGreen");
-
-// buttonGreen.addEventListener("click", function () {
-//   windowBackground.classList.toggle("activeGreen")
-// });
+function visibilityHandlerWindow6() {
+    window6.classList.toggle("show");
+}
