@@ -2,8 +2,8 @@
 const desktopItems = document.querySelectorAll(".desktop-item");
 
 // 2. loop door alle buttons && voeg voor iedere button een eventListener toe
-desktopItems.forEach(desktopItem => {
-    const desktopItemsButton = desktopItem.querySelector("button");
+desktopItems.forEach(item => {
+    const desktopItemsButton = item.querySelector("button");
     desktopItemsButton.addEventListener("click", togglePopup);
 })
 
