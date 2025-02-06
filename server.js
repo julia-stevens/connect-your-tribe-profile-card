@@ -25,6 +25,16 @@ try { // deze code wordt eerst uitgevoerd
   personResponseJSON.data.custom = {}; // person.custom leeg, zodat alleen deze velden leeg zijn bij een error (en niet de hele pagina failt)
 }
 
+try {
+  if (typeof personResponseJSON.birthdate === "string") {
+    let parseBirthdate = Date.parse(personResponseJSON.birthdate);
+    personResponseJSON.birthdate = new Date(parseBirthdate);
+  }
+} catch (error) {
+  console.error(error);
+  personResponseJSON.birthdate = {};
+}
+
 
 // Controleer eventueel de data in je console
 // (Let op: dit is _niet_ de console van je browser, maar van NodeJS, in je terminal)

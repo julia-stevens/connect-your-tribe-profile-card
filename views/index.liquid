@@ -22,6 +22,7 @@
           <span>--github-handle: "<em>{{ person.github_handle }}</em>";</span>
           <span>--favorite-color: "<em class="cornflowerblue">{{ person.custom.favoriteColor }}</em>";</span>
           <span>--location: "<em>{{ person.custom.location }}</em>";</span>
+          <span>--birthday: "<em>{{ person.birthdate | date: "%d %B" | downcase }}</em>";</span>
           <span class="h2-block">}</span>
         </p>
       </div>

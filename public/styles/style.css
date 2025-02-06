@@ -9,13 +9,13 @@ main, .desktop-items, .desktop-items-left, .desktop-items-right {
     align-items: center; 
     gap: 1rem;   
 
-    @media (min-width: 1000px) {
+    @media (min-width: 1064px) {
         display: inline-block; 
     }
 }
 
 main {
-    @media (min-width: 1000px) {
+    @media (min-width: 1064px) {
         overflow-y: hidden;
 
         position: absolute; 
@@ -73,17 +73,20 @@ main {
             span {
                 display: block; 
 
-                &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3) {
-                    margin-left: 1rem;
-                    color: indianred;
+                margin-left: 1rem;
+                color: indianred;
 
-                    > em {
-                        color: mediumseagreen;
-                    }
+                > em {
+                    color: mediumseagreen;
+                }
 
-                    .cornflowerblue {
-                        color: cornflowerblue;
-                    }
+                .cornflowerblue {
+                    color: cornflowerblue;
+                }
+
+                &:last-of-type {
+                    margin-left: 1rem; 
+                    color: inherit;
                 }
             }
         }
@@ -148,7 +151,7 @@ main {
 }
 
 .desktop-items {
-    @media (min-width: 1000px) {
+    @media (min-width: 1064px) {
         height: 100%;
 
         display: flex; 
@@ -183,7 +186,7 @@ main {
             max-width: 200px;
         }
 
-        @media (min-width: 1000px) {            
+        @media (min-width: 1064px) {            
             display: flex; 
             flex-direction: column;
             align-items: center;
@@ -199,46 +202,50 @@ main {
     }
 
     article {
-        
-        display: none;
-        position: absolute; 
+        @media (min-width: 1064px) {
+            display: none;
+            position: absolute; 
 
-        &.show {
-            display: flex;  
+            &.show {
+                display: flex;  
+            }
+
+            /* MIJN HOND */
+            &.item1 {
+                translate: 70% -20%;
+            }
+
+            /* SEMESTER 1 */
+            &.item2 {
+                translate: 40% 80%;
+            }
+
+            /* CURRENTLY WATCHING */
+            &.item3 {
+                translate: 85% -50%;
+            }
+
+            /* CURRENTLY WORKING ON */
+            &.item4 {
+                translate: -80% 50%;
+            }
+
+            /* CURRENTLY WORKING ON */
+            &.item5 {
+                translate: -70% -20%;
+            }       
+            
+            &.item6 {
+                translate: -100% -65%;
+            }
         }
 
-        /* MIJN HOND */
-        &.item1 {
-            translate: 70% -20%;
-        }
-
-        /* SEMESTER 1 */
-        &.item2 {
-            translate: 40% 80%;
-        }
-
-        /* CURRENTLY WATCHING */
-        &.item3 {
-            translate: 85% -50%;
-        }
-
-        /* CURRENTLY WORKING ON */
-        &.item4 {
-            translate: -80% 50%;
-        }
-
-        /* CURRENTLY WORKING ON */
-        &.item5 {
-            translate: -70% -20%;
-        }       
-        
-        &.item6 {
+        &.digital-garden {
             --bg-color-digital-garden2: #6b5e74;
-            translate: -100% -65%;
-
+        
             height: 27rem;
             background-color: var(--bg-color-digital-garden2);
-    
+        
             figure {
                 display: grid; 
                 place-items: center; 
@@ -247,21 +254,21 @@ main {
                 img {
                     position: absolute; 
                     width: 16rem;
-    
+        
                     /* CURTAIN */
                     &:nth-of-type(1) {
                         scale: var(--scale-09);     
                         z-index: var(--z-index-3);     
                         translate: 5% 0%;
                     }
-    
+        
                     /* FLOWER THINGY */
                     &:nth-of-type(2) {
                         scale: var(--scale-08);     
                         z-index: var(--z-index-2);     
                         translate: -18% 8%;
                     }
-    
+        
                     /* POET */
                     &:nth-of-type(3) {
                         scale: var(--scale-05);     
@@ -269,7 +276,7 @@ main {
                         translate: -12% 20%;
                         animation: poet 7.5s ease-in-out infinite;
                     }
-    
+        
                     /* WRITINGS */
                     &:nth-of-type(4) {
                         scale: var(--scale-06);        
@@ -281,6 +288,9 @@ main {
         }
     }
 }
+
+
+
 
 @keyframes clouds {
     0% {
