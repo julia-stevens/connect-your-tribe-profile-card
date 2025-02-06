@@ -1,5 +1,5 @@
 {% render 'partials/head.liquid' %}
-{% comment %} <details><summary>Data</summary><pre>{{ person | json:4 }}</pre></details> {% endcomment %}
+<details><summary>Data</summary><pre>{{ person | json:4 }}</pre></details>
 
   <main>
     <section class="opened-window introduction">
@@ -20,8 +20,8 @@
         <h2>.about-me {</h2>
         <p>
           <span>--github-handle: "<em>{{ person.github_handle }}</em>";</span>
-          <span>--favorite-color: "<em class="cornflowerblue">{{ person.custom.favoriteColor }}</em>";</span>
           <span>--location: "<em>{{ person.custom.location }}</em>";</span>
+          <span>--favorite-color: "<em class="cornflowerblue">{{ person.custom.favoriteColor }}</em>";</span>
           <span>--birthday: "<em>{{ person.birthdate | date: "%d %B" | downcase }}</em>";</span>
           <span class="h2-block">}</span>
         </p>
@@ -131,7 +131,7 @@
         <article class="opened-window item5">
           <div class="content">
             <h4>More about me</h4>
-            <p>Hoi! Ik ben een frontender in spé. Ik wil van alles leren over HTML, CSS en Javascript en nieuwe technieken blijven leren ontdekken. Bekijk mijn bureaublad om mij iets beter te leren kennen.</p>
+            <p>{{ person.custom.moreAboutMe }}</p>
           </div>
           <div class="browser-buttons">
             <button class="red"></button>
@@ -144,9 +144,9 @@
       <section class="desktop-item icon6">
         <button><img src="assets/desktop-icons/icon-notepad.png" alt="Retro icoon notitieblok" width="100"></button>
         <h3><em>Digital Garden</em></h3>
-        <article class="opened-window item6">
+        <article class="opened-window item6 digital-garden">
           <div class="content">
-            <h4>Digital garden <em>Tortured Poet</em></h4>
+            <h4>Digital garden <em>{{ person.custom.digitalGardenCollageTitel }}</em></h4>
             <a href="https://julia-stevens.github.io/i-love-web/digital-garden/digital-garden-v2/index.html">
               <figure>
                 <img src="assets/collage2/curtain.png" alt="Groen gordijn" width="100">
