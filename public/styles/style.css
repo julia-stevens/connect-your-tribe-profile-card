@@ -287,6 +287,15 @@ main {
             }
         }
     }
+
+    button {
+        transition: .2s ease-in-out; 
+
+        &:hover {
+            filter: brightness(.75);
+        }
+    }
+
 }
 
 @keyframes clouds {
