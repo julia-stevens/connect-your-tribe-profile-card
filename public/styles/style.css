@@ -240,11 +240,12 @@ main {
             }
         }
 
-        &.digital-garden {
+        &.digital-garden2 {
             --bg-color-digital-garden2: #6b5e74;
         
             height: 27rem;
             background-color: var(--bg-color-digital-garden2);
+            position: relative;
         
             figure {
                 display: grid; 
