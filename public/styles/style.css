@@ -245,7 +245,7 @@ main {
         
             height: 27rem;
             background-color: var(--bg-color-digital-garden2);
-            position: relative;
+            /* position: relative; */
         
             figure {
                 display: grid; 
